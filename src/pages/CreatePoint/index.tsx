@@ -17,7 +17,7 @@ import logo from "../../assets/logo.svg";
 interface Item {
     id: number;
     name: string;
-    image_url: string
+    image_url: string;
 }
 
 interface IBGEUFResponse {
@@ -111,7 +111,7 @@ const CreatePoint = () => {
             const {latitude, longitude } = position.coords;
             setInitialPosition([latitude, longitude]);
         })
-    })
+    }, [])
 
 
     useEffect(() => {
