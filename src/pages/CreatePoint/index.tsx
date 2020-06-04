@@ -16,7 +16,7 @@ import logo from "../../assets/logo.svg";
 
 interface Item {
     id: number;
-    title: string;
+    name: string;
     image_url: string
 }
 
@@ -251,8 +251,8 @@ const CreatePoint = () => {
                                         onClick={() => handleSelectItem(item.id)} 
                                         className={selectedItems.includes(item.id) ? 'selected' : ''}
                                     >
-                                        <img src={item.image_url} alt={item.title} />
-                                        <span>Óleo de Cozinha</span>
+                                        <img src={item.image_url} alt={item.name} />
+                                        <span>{item.name}</span>
                                     </li>
                                 )
                             )
